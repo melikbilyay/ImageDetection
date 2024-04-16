@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread ("/Users/farukberkozturk/Desktop/proje/people.jpg")
+img = cv2.imread ("/your/image.jpg")
 #print (img)
 
 img_width = img.shape [1]
@@ -40,13 +40,6 @@ ids_list=[]
 boxes_list=[]
 confidences_list=[]
 
-
-
-
-
-
-
-
 for detection_layer in detection_layers:
     for object_detection in detection_layer:
         scores= object_detection[5:]
@@ -80,10 +73,6 @@ for max_id in max_ids:
     predicted_id = ids_list[max_class_id]
     label = labels[predicted_id]
     confidence = confidences_list[max_class_id]
-            
-            
-            
-            
             
     end_x = start_x + box_widht
     end_y = start_y + box_height
